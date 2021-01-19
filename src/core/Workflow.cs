@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Workflow {
-    public class Workflow {
+    public class Workflow: Model {
         public async Task Run() {
             if (_trigger == null) {
                 throw new ArgumentNullException(nameof(_trigger), "未设置trigger");

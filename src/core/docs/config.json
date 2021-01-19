@@ -1,0 +1,14 @@
+{
+    "trigger": {
+        "type": "timer",
+        "cron": "0 0 1"
+    },
+    "tasks": [{
+        "id": "1"
+
+    }],
+    "topology": [{
+        "parent": "1",
+        "child": "2"
+    }]
+}

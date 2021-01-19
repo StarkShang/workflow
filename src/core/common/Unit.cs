@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Workflow
 {
-    public class Unit {
+    public class Unit: Model {
         public void AddTask(WorkTask task) {
             _tasks.Add(task);
         }
@@ -15,10 +15,8 @@ namespace Workflow
             }
         }
 
-        public readonly string Id;
         protected readonly List<WorkTask> _tasks;
         public Unit() {
-            Id = Guid.NewGuid().ToString("N");
             _tasks = new List<WorkTask>();
         }
     }

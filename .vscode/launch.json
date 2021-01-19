@@ -5,6 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Workflow.Service",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build workflow service",
+            "program": "${workspaceFolder}/src/service/bin/Debug/net5.0/Workflow.Service.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }, {
             "name": "Workflow.Console",
             "type": "coreclr",
             "request": "launch",
